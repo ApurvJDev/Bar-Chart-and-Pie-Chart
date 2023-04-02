@@ -10,33 +10,107 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+                <Button
+                    android:id="@+id/btnNextActivity"
+                    android:text="Next Activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/txtTotal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintVertical_bias="0"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total : "
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/barChart"
+                    app:layout_constraintEnd_toEndOf="@+id/barChart"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/barChart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="sans-serif-black"/>
+
+                <TextView
+                    android:id="@+id/txtDailyAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="334dp"
+                    android:text="Daily Average : "
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/barChart"
+                    app:layout_constraintEnd_toEndOf="@+id/barChart"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/barChart"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTotal"
+                    app:layout_constraintVertical_bias="0"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-black"/>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressBar"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:progress="0"
+                    android:max="100"
+                    android:background="@drawable/progress_bar_bg"
+                    app:layout_constraintBottom_toTopOf="@+id/barChart"
+                    app:layout_constraintEnd_toEndOf="@+id/barChart"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/barChart"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDailyAvg"
+                    app:layout_constraintVertical_bias="0"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/txtExpenseUsed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/barChart"
+                    app:layout_constraintEnd_toEndOf="@+id/barChart"
+                    app:layout_constraintStart_toStartOf="@+id/barChart"
+                    app:layout_constraintTop_toBottomOf="@+id/progressBar"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-black"/>
 
                 <com.github.mikephil.charting.charts.BarChart
                     android:id="@+id/barChart"
-                    android:layout_width="350dp"
+                    android:layout_width="300dp"
                     android:layout_height="650dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.007"
-                    android:layout_marginTop="20dp"/>
+                    app:layout_constraintVertical_bias="0"
+                    android:layout_marginTop="250dp"/>
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChart"
-                    android:layout_width="350dp"
-                    android:layout_height="650dp"
+                    android:layout_width="300dp"
+                    android:layout_height="450dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/barChart"
-                    android:layout_marginTop="40dp"/>
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="0.5"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
 
 </ScrollView>
